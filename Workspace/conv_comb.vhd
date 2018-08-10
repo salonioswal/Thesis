@@ -23,6 +23,7 @@ signal wr_ptr        : unsigned(1 downto 0); --! wr pointer
 signal done			 : std_logic;
 signal sys_reset	 : std_logic:='1';
 signal wr_en		 : std_logic;
+signal rd_addr       :unsigned (coeff_width-1 downto 0); --sram data
 
 component final_conv is	
 	port( data_input	: in signed(data_width-1 downto 0);
@@ -49,7 +50,8 @@ component fsm IS
 		rd_ptr        : out unsigned(1 downto 0); --! rd pointer
 		wr_ptr        : out unsigned(1 downto 0); --! wr pointer
 		done          : out std_logic; --! Fsm completed	
-		reset_kernel:out  std_logic
+		reset_kernel:out  std_logic;
+		rd_addr	 	: out unsigned (coeff_width-1 downto 0)
 	);
 END component;
 

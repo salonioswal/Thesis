@@ -2,7 +2,7 @@ LIBRARY IEEE,work;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.numeric_std.all;
 USE work.all;
-
+use work.mypackage2.all;  
 ---------------------------------------------------------------------------
 ENTITY fsm IS
 ---------------------------------------------------------------------------
@@ -14,10 +14,14 @@ ENTITY fsm IS
 		reset_kernel: out std_logic;
 		reset_mac     : out std_logic; --! reset to mac (positive reset)
 		reset_shifter : out std_logic; --! reset to the shifter (rf file) (positive reset)
+		reset_rf_out  : out std_logic;
 		rd_ptr      : out unsigned(1 downto 0); --! rd pointer
 		wr_ptr       : out unsigned(1 downto 0); --! wr pointer
 		done          : out std_logic ;--! Fsm completed
-		wr_en		  : out std_logic
+		wr_en		  : out std_logic;
+		rd_addr	 	: out unsigned (coeff_width-1 downto 0);
+		wr_ptr_out: out unsigned (coeff_width-1 downto 0);
+		wr_en_rf	: out std_logic
 	);
 END ENTITY;
 
@@ -36,7 +40,10 @@ ARCHITECTURE beh OF fsm IS
 		signal next_reset_mac : std_logic;
 		signal next_reset_shifter : std_logic:='0';
 		signal next_reset_kernel : std_logic:='0';
-
+		signal next_rd_addr: unsigned (coeff_width-1 downto 0):=(OTHERS => '0');
+		signal next_wr_ptr_out : unsigned (coeff_width-1 downto 0):=(OTHERS => '0');
+		signal next_wr_en_rf: std_logic:='0';
+		signal next_reset_rf_out : std_logic:='0';
 BEGIN	
 	clocked_proc : process(clk, rst_n)
 	begin
@@ -49,6 +56,10 @@ BEGIN
 			reset_shifter <= '0';
 			reset_kernel<='0';
 		   	wr_en<='0';
+			rd_addr<=(OTHERS => '0');
+			wr_ptr_out<=(OTHERS => '0');
+			wr_en_rf<='0';
+			reset_rf_out<='0';
 		elsif rising_edge(clk) then 
 			state <= next_state;
 			count <= next_count;
@@ -58,6 +69,10 @@ BEGIN
 			reset_shifter <= next_reset_shifter;
 			reset_kernel <= next_reset_kernel;
 			wr_en<=next_wr_en;
+			rd_addr<=next_rd_addr;
+			wr_ptr_out<=next_wr_ptr_out;
+			wr_en_rf<=next_wr_en_rf;
+			reset_rf_out<=next_reset_rf_out;
 		end if;
 	end process clocked_proc;
 	wr_ptr<= rf_count;
@@ -74,6 +89,8 @@ BEGIN
 		next_reset_shifter <= '0';
 		next_reset_kernel <= '1';
 		next_wr_en<='0';
+		next_rd_addr<=(OTHERS => '0');
+		next_wr_en_rf<='0';
 		case state  is
 			WHEN Idle=>
 				next_count <= (OTHERS => '0');
@@ -91,6 +108,8 @@ BEGIN
 				next_wr_en<='1';
 				next_reset_shifter <= '1'; 
 				next_rf_count <= rf_count + 1;
+				next_rd_addr<= rd_addr+ 1;
+				
 				if rf_count = 3  then
 					next_state <= evaluate;
 					next_wr_en<='0';
@@ -115,16 +134,19 @@ BEGIN
 -- data ready 
 					next_conv_count <= (OTHERS => '0');
 					next_state <= column_count;
-					
+					next_wr_ptr_out<=wr_ptr_out +1;
 					
 				end if;
 			
 			when column_count=>
+				next_wr_en_rf<='1';
+				next_reset_rf_out<='1';	
 				next_reset_shifter <= '1';
-				 next_wr_en<='0';
+				next_wr_en<='0';
 				next_count <= count + 1;
+				
 				if (count = 4) then -- Check if all have been calculated
-					-- all is done then stop fsm
+									-- all is done then stop fsm
 					next_state <= done_S;
 				else
 					-- more to be done, then load next set of data
