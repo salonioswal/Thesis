@@ -1,0 +1,23 @@
+library IEEE; 
+use IEEE.STD_LOGIC_1164.all; 
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+package my_package is 
+ 
+constant data_width: integer := 8; --input data widths
+CONSTANT m: INTEGER := 4; --Number of rows in the original image taken each time	
+CONSTANT n: INTEGER := 4; --Number of columns in the original image taken each time	
+
+			
+   type reg_file is array (m-1 downto 0) of signed(data_width-1 downto 0);
+   type matrix is array(n-1 downto 0) of reg_file;	
+   type r_file is array (1 downto 0) of signed(data_width-1);
+   type m_file is array (1 downto 0) of r_file;
+
+
+end my_package; 
+
+
+package body my_package is 
+
+end my_package;

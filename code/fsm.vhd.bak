@@ -1,0 +1,168 @@
+LIBRARY IEEE,work;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.numeric_std.all;
+USE work.all;
+use work.mypackage2.all;  
+---------------------------------------------------------------------------
+ENTITY fsm IS
+---------------------------------------------------------------------------
+
+	PORT(
+		rst_n	: IN  std_logic; --! reset negative
+		clk		: IN  std_logic; --! clk
+		start   : IN  std_logic; --! start signal
+		reset_kernel: out std_logic;
+		reset_mac     : out std_logic; --! reset to mac (positive reset)
+		reset_shifter : out std_logic; --! reset to the shifter (rf file) (positive reset)
+		reset_rf_out  : out std_logic;
+		rd_ptr      : out unsigned(1 downto 0); --! rd pointer
+		wr_ptr       : out unsigned(1 downto 0); --! wr pointer
+		done          : out std_logic ;--! Fsm completed
+		wr_en		  : out std_logic;
+		rd_addr	 	: out unsigned (coeff_width-1 downto 0);
+		wr_ptr_out: out unsigned (coeff_width-1 downto 0);
+		wr_en_rf	: out std_logic
+	);
+END ENTITY;
+
+
+ARCHITECTURE beh OF fsm IS
+        TYPE FSM_State IS (Idle, first_fill, next_fill, evaluate, load_con, column_count, done_S);
+        signal state : FSM_state; --! current state
+		signal next_state : FSM_state; --! next state
+		signal count : unsigned(3 downto 0); --! count register
+		signal next_count : unsigned(3 downto 0); --! next count calculation
+		signal rf_count : unsigned(1 downto 0); --! counter register for rf file
+		signal next_rf_count : unsigned(1 downto 0); --! next value of counter for register file
+		signal conv_count : unsigned (1 downto 0); --! counter for convoloution
+		signal next_conv_count : unsigned(1 downto 0); --! next value for conv counter
+		signal next_wr_en: std_logic:='0';
+		signal next_reset_mac : std_logic;
+		signal next_reset_shifter : std_logic:='0';
+		signal next_reset_kernel : std_logic:='0';
+		signal next_rd_addr: unsigned (coeff_width-1 downto 0):=(OTHERS => '0');
+		signal next_wr_ptr_out : unsigned (coeff_width-1 downto 0):=(OTHERS => '0');
+		signal next_wr_en_rf: std_logic:='0';
+		signal next_reset_rf_out : std_logic:='0';
+BEGIN	
+	clocked_proc : process(clk, rst_n)
+	begin
+		if rst_n = '0' then
+			state <= Idle;
+			count <= (OTHERS => '0');
+			rf_count <= (OTHERS =>'0');
+			conv_count <= (OTHERS => '0');
+			reset_mac  <= '0';
+			reset_shifter <= '0';
+			reset_kernel<='0';
+		   	wr_en<='0';
+			rd_addr<=(OTHERS => '0');
+			wr_ptr_out<=(OTHERS => '0');
+			wr_en_rf<='0';
+			reset_rf_out<='0';
+		elsif rising_edge(clk) then 
+			state <= next_state;
+			count <= next_count;
+			rf_count <= next_rf_count;
+			conv_count <= next_conv_count;
+			reset_mac <= next_reset_mac;
+			reset_shifter <= next_reset_shifter;
+			reset_kernel <= next_reset_kernel;
+			wr_en<=next_wr_en;
+			rd_addr<=next_rd_addr;
+			wr_ptr_out<=next_wr_ptr_out;
+			wr_en_rf<=next_wr_en_rf;
+			reset_rf_out<=next_reset_rf_out;
+		end if;
+	end process clocked_proc;
+	wr_ptr<= rf_count;
+	rd_ptr <= conv_count;
+	fsm_status : process (ALL)
+	begin
+		-- Default values
+		done <= '0';
+		next_state <= state;
+		next_count <= count;
+		next_conv_count <= conv_count;
+		next_rf_count <= rf_count;
+		next_reset_mac <= '0';
+		next_reset_shifter <= '0';
+		next_reset_kernel <= '1';
+		next_wr_en<='0';
+		next_rd_addr<=(OTHERS => '0');
+		next_wr_en_rf<='0';
+		case state  is
+			WHEN Idle=>
+				next_count <= (OTHERS => '0');
+				next_rf_count <= (OTHERS =>'0');
+				next_conv_count <= (OTHERS => '0');
+				next_reset_mac <= '1'; -- reset mac
+				next_wr_en<='1';
+				if (start = '1') then
+					next_state <= first_fill;
+					next_rf_count <= (OTHERS => '0'); -- Starting value of the wr pointer in register file
+					next_wr_en<='1';
+					next_reset_shifter <= '1';
+				end if;
+			when first_fill =>
+				next_wr_en<='1';
+				next_reset_shifter <= '1'; 
+				next_rf_count <= rf_count + 1;
+				next_rd_addr<= rd_addr+ 1;
+				
+				if rf_count = 3  then
+					next_state <= evaluate;
+					next_wr_en<='0';
+					next_rf_count <=  (OTHERS => '0');
+				end if;
+			
+			when load_con =>
+				next_wr_en<='0';
+				next_rf_count <= rf_count + 1;
+				next_reset_shifter <= '1';
+				if rf_count = 3  then
+					next_state <= evaluate;
+					next_reset_mac <= '1';
+				end if;
+			
+			WHEN evaluate=>
+				next_reset_shifter <= '1'; -- reset shifter
+				 next_wr_en<='0';
+				next_conv_count <= conv_count + 1;
+				next_reset_mac <= '1';
+				if( conv_count = 3) then
+-- data ready 
+					next_conv_count <= (OTHERS => '0');
+					next_state <= column_count;
+					next_wr_en_rf<='1';
+					next_wr_ptr_out<=wr_ptr_out +1;
+					next_reset_rf_out<='1';
+				end if;
+			
+			when column_count=>
+				next_reset_shifter <= '1';
+				 next_wr_en<='0';
+				next_count <= count + 1;
+				if(count=1)
+					next_wr_en_rf<='1';
+				end if;
+				if (count = 4) then -- Check if all have been calculated
+									-- all is done then stop fsm
+					next_state <= done_S;
+				else
+					-- more to be done, then load next set of data
+					next_state <= load_con;
+					next_rf_count <= to_unsigned(1,2); -- starting pointer of the rf wr pointer value
+				end if;
+			
+			when done_S=>
+				done <= '1';
+				next_state <= Idle;
+				
+			when OTHERS=>
+				done <= '0';
+		end case;
+	end process fsm_status;
+
+END ARCHITECTURE beh;
+
