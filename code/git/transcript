@@ -1,0 +1,1000 @@
+# //  Questa Sim-64
+# //  Version 10.6c_1 linux_x86_64 Sep 15 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+vlib work
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mypackage2.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:04:23 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mypackage2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package mypackage2
+# -- Compiling package body mypackage2
+# -- Loading package mypackage2
+# End time: 11:04:23 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mypackage2.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:04:57 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mypackage2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package mypackage2
+# -- Compiling package body mypackage2
+# -- Loading package mypackage2
+# End time: 11:04:57 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:04:58 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# ** Error: (vcom-11) Could not find work.misc.
+# ** Error (suppressible): /home/saloni/Documents/Workspace/mac.vhd(4): (vcom-1195) Cannot find expanded name "work.misc".
+# ** Error: /home/saloni/Documents/Workspace/mac.vhd(4): Unknown expanded name.
+# -- Loading package mypackage2
+# ** Error: /home/saloni/Documents/Workspace/mac.vhd(7): VHDL Compiler exiting
+# End time: 11:04:58 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:05:17 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity mac
+# -- Compiling architecture behavioral_mac of mac
+# ** Error: /home/saloni/Documents/Workspace/mac.vhd(20): Illegal concurrent statement.
+# ** Error: /home/saloni/Documents/Workspace/mac.vhd(28): VHDL Compiler exiting
+# End time: 11:05:17 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:06:14 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity mac
+# -- Compiling architecture behavioral_mac of mac
+# ** Error: /home/saloni/Documents/Workspace/mac.vhd(21): near "if": syntax error
+# ** Error: /home/saloni/Documents/Workspace/mac.vhd(28): near "process": (vcom-1576) expecting ';'.
+# End time: 11:06:14 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:07:01 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity mac
+# -- Compiling architecture behavioral_mac of mac
+# ** Warning: /home/saloni/Documents/Workspace/mac.vhd(29): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+# End time: 11:07:02 on Aug 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:07:27 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity mac
+# -- Compiling architecture behavioral_mac of mac
+# ** Warning: /home/saloni/Documents/Workspace/mac.vhd(27): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+# End time: 11:07:27 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:08:02 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity mac
+# -- Compiling architecture behavioral_mac of mac
+# End time: 11:08:02 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.mac
+# vsim work.mac 
+# Start time: 11:08:06 on Aug 07,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.mac(behavioral_mac)#1
+add wave -position insertpoint  \
+sim:/mac/acc \
+sim:/mac/clock \
+sim:/mac/mac_en \
+sim:/mac/Q0 \
+sim:/mac/Q1 \
+sim:/mac/reg \
+sim:/mac/reset
+force -freeze sim:/mac/Q0 16'h0001 0
+force -freeze sim:/mac/Q1 16'h0001 0
+force -freeze sim:/mac/reset 1 0
+force -freeze sim:/mac/clock 1 0, 0 {5 ns} -r 10
+run
+force -freeze sim:/mac/mac_en 1 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:09:39 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity mac
+# -- Compiling architecture behavioral_mac of mac
+# End time: 11:09:39 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.mac
+# End time: 11:09:44 on Aug 07,2018, Elapsed time: 0:01:38
+# Errors: 0, Warnings: 0
+# vsim work.mac 
+# Start time: 11:09:44 on Aug 07,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.mac(behavioral_mac)#1
+add wave -position insertpoint  \
+sim:/mac/acc \
+sim:/mac/clock \
+sim:/mac/mac_en \
+sim:/mac/Q0 \
+sim:/mac/Q1 \
+sim:/mac/reg \
+sim:/mac/reset
+force -freeze sim:/mac/clock 1 0, 0 {5 ns} -r 10
+force -freeze sim:/mac/mac_en 1 0
+force -freeze sim:/mac/Q0 16'h0001 0
+force -freeze sim:/mac/Q1 16'h0001 0
+force -freeze sim:/mac/reset 1 0
+run
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:12:20 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity mac
+# -- Compiling architecture behavioral_mac of mac
+# End time: 11:12:20 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.mac
+# End time: 11:12:25 on Aug 07,2018, Elapsed time: 0:02:41
+# Errors: 0, Warnings: 0
+# vsim work.mac 
+# Start time: 11:12:25 on Aug 07,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.mac(behavioral_mac)#1
+add wave -position insertpoint  \
+sim:/mac/acc \
+sim:/mac/clock \
+sim:/mac/mac_en \
+sim:/mac/Q0 \
+sim:/mac/Q1 \
+sim:/mac/reg \
+sim:/mac/reset
+force -freeze sim:/mac/mac_en 1 0
+force -freeze sim:/mac/clock 1 0, 0 {5 ns} -r 10
+force -freeze sim:/mac/Q0 16'h0001 0
+force -freeze sim:/mac/Q1 16'h0001 0
+force -freeze sim:/mac/reset 1 0
+run
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:28:31 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity mac
+# -- Compiling architecture behavioral_mac of mac
+# End time: 11:28:31 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/shifter.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:28:35 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# ** Error: /home/saloni/Documents/Workspace/shifter.vhd(7): near "entiry": syntax error
+# End time: 11:28:35 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/shifter.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:28:48 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity shifter
+# -- Compiling architecture behavioral_shifter of shifter
+# ** Error: /home/saloni/Documents/Workspace/shifter.vhd(18): near ";": (vcom-1576) expecting ')'.
+# ** Error: /home/saloni/Documents/Workspace/shifter.vhd(21): (vcom-1136) Unknown identifier "RF_data".
+# ** Error: /home/saloni/Documents/Workspace/shifter.vhd(27): Illegal target for signal assignment.
+# ** Error: /home/saloni/Documents/Workspace/shifter.vhd(27): (vcom-1136) Unknown identifier "RF_data".
+# ** Error: /home/saloni/Documents/Workspace/shifter.vhd(30): Illegal target for signal assignment.
+# ** Error: /home/saloni/Documents/Workspace/shifter.vhd(30): (vcom-1136) Unknown identifier "RF_Data".
+# ** Error: /home/saloni/Documents/Workspace/shifter.vhd(35): VHDL Compiler exiting
+# End time: 11:28:48 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/shifter.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:29:11 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity shifter
+# -- Compiling architecture behavioral_shifter of shifter
+# End time: 11:29:11 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.shifter
+# End time: 11:29:17 on Aug 07,2018, Elapsed time: 0:16:52
+# Errors: 8, Warnings: 0
+# vsim work.shifter 
+# Start time: 11:29:17 on Aug 07,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.shifter(behavioral_shifter)#1
+add wave -position insertpoint  \
+sim:/shifter/clock \
+sim:/shifter/input_data \
+sim:/shifter/output_data \
+sim:/shifter/rd_ptr \
+sim:/shifter/RF_data \
+sim:/shifter/rst_n \
+sim:/shifter/wr_en \
+sim:/shifter/wr_ptr
+force -freeze sim:/shifter/clock 1 0, 0 {5 ns} -r 10
+force -freeze sim:/shifter/input_data 16'h0001 0
+force -freeze sim:/shifter/wr_ptr 1 0, 0 {50 ns} -r 100
+force -freeze sim:/shifter/wr_ptr 2'h01 0 -cancel 5
+force -freeze sim:/shifter/wr_en 1 0 -cancel 10
+force -freeze sim:/shifter/rd_ptr 2'h01 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /shifter
+force -freeze sim:/shifter/rst_n 1 0
+run
+run
+run
+force -freeze sim:/shifter/wr_en 1 0
+run
+# Break key hit
+quit -sim
+# End time: 11:33:35 on Aug 07,2018, Elapsed time: 0:04:18
+# Errors: 0, Warnings: 2
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:36:46 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity kernel
+# -- Compiling architecture behavioral_kernel of kernel
+# ** Error: /home/saloni/Documents/Workspace/kernel.vhd(19): near "if": syntax error
+# ** Error: /home/saloni/Documents/Workspace/kernel.vhd(25): VHDL Compiler exiting
+# End time: 11:36:46 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:37:04 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity kernel
+# -- Compiling architecture behavioral_kernel of kernel
+# ** Error: /home/saloni/Documents/Workspace/kernel.vhd(21): Aggregate expression cannot be scalar type ieee.std_logic_1164.STD_ULOGIC.
+# ** Error: /home/saloni/Documents/Workspace/kernel.vhd(24): near "process": (vcom-1576) expecting IF.
+# End time: 11:37:04 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:37:21 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity kernel
+# -- Compiling architecture behavioral_kernel of kernel
+# ** Error: /home/saloni/Documents/Workspace/kernel.vhd(24): near "process": (vcom-1576) expecting IF.
+# End time: 11:37:21 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:38:30 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity kernel
+# -- Compiling architecture behavioral_kernel of kernel
+# ** Error: /home/saloni/Documents/Workspace/kernel.vhd(24): near "output_data": (vcom-1576) expecting THEN.
+# End time: 11:38:30 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:38:39 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity kernel
+# -- Compiling architecture behavioral_kernel of kernel
+# End time: 11:38:39 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.kernel
+# vsim work.kernel 
+# Start time: 11:38:42 on Aug 07,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.kernel(behavioral_kernel)#1
+add wave -position insertpoint  \
+sim:/kernel/clock \
+sim:/kernel/input_data \
+sim:/kernel/kernel_coeff \
+sim:/kernel/output_data \
+sim:/kernel/rd_ptr \
+sim:/kernel/rst_n
+force -freeze sim:/kernel/clock 1 0, 0 {5 ns} -r 10
+force -freeze sim:/kernel/clock 1 0, 0 {5 ns} -r 10
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 11:39:32 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity kernel
+# -- Compiling architecture behavioral_kernel of kernel
+# End time: 11:39:32 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.kernel
+# End time: 11:39:38 on Aug 07,2018, Elapsed time: 0:00:56
+# Errors: 0, Warnings: 0
+# vsim work.kernel 
+# Start time: 11:39:38 on Aug 07,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.kernel(behavioral_kernel)#1
+add wave -position insertpoint  \
+sim:/kernel/clock \
+sim:/kernel/kernel_coeff \
+sim:/kernel/output_data \
+sim:/kernel/rd_ptr \
+sim:/kernel/rst_n
+force -freeze sim:/kernel/clock 1 0, 0 {5 ns} -r 10
+force -freeze sim:/kernel/rd_ptr 1 0, 0 {10 ns} -r 20
+force -freeze sim:/kernel/rst_n 1 0
+run
+force -freeze sim:/kernel/clock 0 0, 1 {50 ns} -r 100
+run
+vsim work.kernel
+# End time: 11:41:25 on Aug 07,2018, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 0
+# vsim work.kernel 
+# Start time: 11:41:25 on Aug 07,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.kernel(behavioral_kernel)#1
+add wave -position insertpoint  \
+sim:/kernel/clock \
+sim:/kernel/kernel_coeff \
+sim:/kernel/output_data \
+sim:/kernel/rd_ptr \
+sim:/kernel/rst_n
+force -freeze sim:/kernel/clock 0 0, 1 {5 ns} -r 10
+force -freeze sim:/kernel/clock 1 0, 0 {50 ns} -r 100
+force -freeze sim:/kernel/rd_ptr 1 0, 0 {10 ns} -r 20
+force -freeze sim:/kernel/rst_n 1 0
+run
+# Break key hit
+quit -sim
+# End time: 11:57:15 on Aug 07,2018, Elapsed time: 0:15:50
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 12:24:52 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity final_conv
+# -- Compiling architecture behavioral of final_conv
+# ** Error: /home/saloni/Documents/Workspace/final_conv.vhd(82): (vcom-1484) Unknown formal identifier "clk".
+# ** Error: /home/saloni/Documents/Workspace/final_conv.vhd(124): VHDL Compiler exiting
+# End time: 12:24:52 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 12:25:13 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity final_conv
+# -- Compiling architecture behavioral of final_conv
+# End time: 12:25:13 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:34:34 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(9): near "architeture": syntax error
+# End time: 13:34:34 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:34:53 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# ** Error (suppressible): /home/saloni/Documents/Workspace/testbench_conv.vhd(24): (vcom-1141) Identifier "final_conv" does not identify a component declaration.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(57): near "wait": (vcom-1576) expecting ';'.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(59): near "wait": (vcom-1576) expecting ';'.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(61): near "wait": (vcom-1576) expecting ';'.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(63): near "wait": (vcom-1576) expecting ';'.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(74): Labels do not match: 'behv_test' and 'behav_test'.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(74): VHDL Compiler exiting
+# End time: 13:34:53 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:35:12 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# ** Error (suppressible): /home/saloni/Documents/Workspace/testbench_conv.vhd(24): (vcom-1141) Identifier "final_conv" does not identify a component declaration.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(74): Labels do not match: 'behv_test' and 'behav_test'.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(74): VHDL Compiler exiting
+# End time: 13:35:12 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:35:25 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# ** Error (suppressible): /home/saloni/Documents/Workspace/testbench_conv.vhd(24): (vcom-1141) Identifier "final_conv" does not identify a component declaration.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(74): VHDL Compiler exiting
+# End time: 13:35:25 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:35:44 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity final_conv
+# -- Compiling architecture behavioral of final_conv
+# End time: 13:35:45 on Aug 07,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:35:47 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# ** Error (suppressible): /home/saloni/Documents/Workspace/testbench_conv.vhd(24): (vcom-1141) Identifier "final_conv" does not identify a component declaration.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(74): VHDL Compiler exiting
+# End time: 13:35:47 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vsim work.final_conv
+# vsim work.final_conv 
+# Start time: 13:37:20 on Aug 07,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.final_conv(behavioral)#1
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:38:45 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity final_conv
+# -- Compiling architecture behavioral of final_conv
+# End time: 13:38:45 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:38:49 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# ** Error (suppressible): /home/saloni/Documents/Workspace/testbench_conv.vhd(24): (vcom-1141) Identifier "final_conv" does not identify a component declaration.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(74): VHDL Compiler exiting
+# End time: 13:38:49 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:39:29 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/mac.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity mac
+# -- Compiling architecture behavioral_mac of mac
+# End time: 13:39:29 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/shifter.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:39:33 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity shifter
+# -- Compiling architecture behavioral_shifter of shifter
+# End time: 13:39:33 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:39:36 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/kernel.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity kernel
+# -- Compiling architecture behavioral_kernel of kernel
+# End time: 13:39:36 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:39:40 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/conv.vhd 
+# -- Loading package STANDARD
+# ** Error (suppressible): /home/saloni/Documents/Workspace/conv.vhd(1): (vcom-1491) Empty source files.
+# End time: 13:39:40 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:39:44 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/final_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity final_conv
+# -- Compiling architecture behavioral of final_conv
+# End time: 13:39:44 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:39:47 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# ** Error (suppressible): /home/saloni/Documents/Workspace/testbench_conv.vhd(24): (vcom-1141) Identifier "final_conv" does not identify a component declaration.
+# ** Error: /home/saloni/Documents/Workspace/testbench_conv.vhd(74): VHDL Compiler exiting
+# End time: 13:39:47 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:49:34 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# End time: 13:49:34 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:49:34 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# End time: 13:49:34 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench_conv
+# End time: 13:49:39 on Aug 07,2018, Elapsed time: 0:12:19
+# Errors: 2, Warnings: 0
+# vsim work.testbench_conv 
+# Start time: 13:49:39 on Aug 07,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.testbench_conv(behv_test)#1
+add wave -position insertpoint  \
+sim:/testbench_conv/clock \
+sim:/testbench_conv/data_input \
+sim:/testbench_conv/data_output \
+sim:/testbench_conv/mac_en \
+sim:/testbench_conv/rd_ptr \
+sim:/testbench_conv/reset_mac \
+sim:/testbench_conv/reset_shifter \
+sim:/testbench_conv/sys_reset \
+sim:/testbench_conv/time_delay \
+sim:/testbench_conv/wr_en \
+sim:/testbench_conv/wr_ptr
+run
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:58:53 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# End time: 13:58:53 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:58:54 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# End time: 13:58:54 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 13:59:13 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# End time: 13:59:13 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench_conv
+# End time: 13:59:21 on Aug 07,2018, Elapsed time: 0:09:42
+# Errors: 0, Warnings: 0
+# vsim work.testbench_conv 
+# Start time: 13:59:21 on Aug 07,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.testbench_conv(behv_test)#1
+add wave -position insertpoint  \
+sim:/testbench_conv/clock \
+sim:/testbench_conv/data_input \
+sim:/testbench_conv/data_output \
+sim:/testbench_conv/mac_en \
+sim:/testbench_conv/rd_ptr \
+sim:/testbench_conv/reset_mac \
+sim:/testbench_conv/reset_shifter \
+sim:/testbench_conv/sys_reset \
+sim:/testbench_conv/time_delay \
+sim:/testbench_conv/wr_en \
+sim:/testbench_conv/wr_ptr
+run
+vsim work.testbench_conv
+# End time: 14:00:07 on Aug 07,2018, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 0
+# vsim work.testbench_conv 
+# Start time: 14:00:07 on Aug 07,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.testbench_conv(behv_test)#1
+add wave -position insertpoint  \
+sim:/testbench_conv/clock \
+sim:/testbench_conv/data_input \
+sim:/testbench_conv/data_output \
+sim:/testbench_conv/mac_en \
+sim:/testbench_conv/rd_ptr \
+sim:/testbench_conv/reset_mac \
+sim:/testbench_conv/reset_shifter \
+sim:/testbench_conv/sys_reset \
+sim:/testbench_conv/time_delay \
+sim:/testbench_conv/wr_en \
+sim:/testbench_conv/wr_ptr
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/M_A_C/acc \
+sim:/testbench_conv/dut/M_A_C/Q0 \
+sim:/testbench_conv/dut/M_A_C/Q1 \
+sim:/testbench_conv/dut/M_A_C/reg
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/shifter_stuff/input_data \
+sim:/testbench_conv/dut/shifter_stuff/output_data \
+sim:/testbench_conv/dut/shifter_stuff/rd_ptr \
+sim:/testbench_conv/dut/shifter_stuff/RF_data \
+sim:/testbench_conv/dut/shifter_stuff/wr_ptr
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/KERNEL_b/kernel_coeff \
+sim:/testbench_conv/dut/KERNEL_b/output_data \
+sim:/testbench_conv/dut/KERNEL_b/rd_ptr
+run
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 14:01:55 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# End time: 14:01:55 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench_conv
+# End time: 14:02:00 on Aug 07,2018, Elapsed time: 0:01:53
+# Errors: 0, Warnings: 0
+# vsim work.testbench_conv 
+# Start time: 14:02:00 on Aug 07,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.testbench_conv(behv_test)#1
+add wave -position insertpoint  \
+sim:/testbench_conv/clock \
+sim:/testbench_conv/data_input \
+sim:/testbench_conv/data_output \
+sim:/testbench_conv/mac_en \
+sim:/testbench_conv/rd_ptr \
+sim:/testbench_conv/reset_mac \
+sim:/testbench_conv/reset_shifter \
+sim:/testbench_conv/sys_reset \
+sim:/testbench_conv/time_delay \
+sim:/testbench_conv/wr_en \
+sim:/testbench_conv/wr_ptr
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/M_A_C/acc \
+sim:/testbench_conv/dut/M_A_C/Q0 \
+sim:/testbench_conv/dut/M_A_C/Q1 \
+sim:/testbench_conv/dut/M_A_C/reg
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/shifter_stuff/input_data \
+sim:/testbench_conv/dut/shifter_stuff/output_data \
+sim:/testbench_conv/dut/shifter_stuff/rd_ptr \
+sim:/testbench_conv/dut/shifter_stuff/RF_data \
+sim:/testbench_conv/dut/shifter_stuff/wr_ptr
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/KERNEL_b/kernel_coeff \
+sim:/testbench_conv/dut/KERNEL_b/output_data \
+sim:/testbench_conv/dut/KERNEL_b/rd_ptr
+run
+vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd
+# QuestaSim-64 vcom 10.6c_1 Compiler 2017.09 Sep 15 2017
+# Start time: 14:03:44 on Aug 07,2018
+# vcom -reportprogress 300 -work work /home/saloni/Documents/Workspace/testbench_conv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package mypackage2
+# -- Compiling entity testbench_conv
+# -- Compiling architecture behv_test of testbench_conv
+# -- Loading entity final_conv
+# End time: 14:03:44 on Aug 07,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench_conv
+# End time: 14:03:51 on Aug 07,2018, Elapsed time: 0:01:51
+# Errors: 0, Warnings: 0
+# vsim work.testbench_conv 
+# Start time: 14:03:51 on Aug 07,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mypackage2(body)
+# Loading work.testbench_conv(behv_test)#1
+add wave -position insertpoint  \
+sim:/testbench_conv/clock \
+sim:/testbench_conv/data_input \
+sim:/testbench_conv/data_output \
+sim:/testbench_conv/mac_en \
+sim:/testbench_conv/rd_ptr \
+sim:/testbench_conv/reset_mac \
+sim:/testbench_conv/reset_shifter \
+sim:/testbench_conv/sys_reset \
+sim:/testbench_conv/time_delay \
+sim:/testbench_conv/wr_en \
+sim:/testbench_conv/wr_ptr
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/KERNEL_b/kernel_coeff \
+sim:/testbench_conv/dut/KERNEL_b/output_data \
+sim:/testbench_conv/dut/KERNEL_b/rd_ptr
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/shifter_stuff/input_data \
+sim:/testbench_conv/dut/shifter_stuff/output_data \
+sim:/testbench_conv/dut/shifter_stuff/rd_ptr \
+sim:/testbench_conv/dut/shifter_stuff/RF_data \
+sim:/testbench_conv/dut/shifter_stuff/wr_ptr
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/M_A_C/acc \
+sim:/testbench_conv/dut/M_A_C/Q0 \
+sim:/testbench_conv/dut/M_A_C/Q1 \
+sim:/testbench_conv/dut/M_A_C/reg
+add wave -position insertpoint  \
+sim:/testbench_conv/dut/acc \
+sim:/testbench_conv/dut/count \
+sim:/testbench_conv/dut/count_en \
+sim:/testbench_conv/dut/data_input \
+sim:/testbench_conv/dut/data_output \
+sim:/testbench_conv/dut/Q0 \
+sim:/testbench_conv/dut/Q1 \
+sim:/testbench_conv/dut/rd_ptr \
+sim:/testbench_conv/dut/reset_kernel \
+sim:/testbench_conv/dut/wr_ptr
+run
+    

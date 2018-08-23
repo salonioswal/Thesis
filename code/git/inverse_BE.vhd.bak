@@ -1,0 +1,89 @@
+library ieee;
+library work;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+use work.my_package.all; 
+use work.all;
+
+entity BE_inverse is 
+	port(data_input		: in signed(data_width-1 downto 0);
+		 clock			: in std_logic;
+		 reset			: in std_logic;
+		 column_counter	: in unsigned(ptr_width_inv-1 downto 0);
+		 row_counter	: in unsigned(ptr_width_inv-1 downto 0);
+		 mac_en			: in std_logic;
+		mac_reset		: in std_logic;
+	    addr: in unsigned(ptr_width_inv-1 downto 0));
+end BE_inverse;
+	
+architecture inv_beh of BE_inverse is
+	
+component mac is
+	port (Q0 : in signed (data_width-1 downto 0);
+		  Q1 : in signed (data_width-1 downto 0);
+		  clock: in std_logic;
+		  reset: in std_logic;
+		  acc: out signed(2*data_width-1 downto 0);
+		  mac_en: in std_logic
+		 );
+	end component;
+		 
+	
+signal acc:	signed(2*data_width-1 downto 0);
+signal x  : regis_file;
+signal B  : regis_file:=((others=>(others=>'0')));
+signal ele_x: signed(data_width-1 downto 0);
+SIGNAL data_in:signed(data_width-1 downto 0);
+begin
+	
+mac_map:mac port map(Q0=>data_in,
+				  Q1=>ele_x,
+				  clock=>clock,
+				  reset=>mac_reset,
+				  acc=>acc,
+				  mac_en=>mac_en);
+
+
+
+process(clock,reset,addr)
+	begin
+	if(reset='0') then
+		x<=(others=>(others=>'0'));
+		ele_x<=(others=>'0');
+		data_in<=(others=>'0');
+		B<=(others=>(others=>'0'));
+	else 
+	ele_x<=x(to_integer(addr));
+	data_in<=data_input;
+	B(to_integer(column_counter)<=x"0001";
+end if;
+	if(rising_edge(clock)) then
+	   
+		if(to_integer(addr)=rows-1) then
+	x(to_integer(row_counter))<= B(to_integer(row_counter))-resize(acc,data_width);
+	end if;
+	end if;
+end process;
+			
+end inv_beh;		
+
+
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
