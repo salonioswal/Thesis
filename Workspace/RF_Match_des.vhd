@@ -6,26 +6,23 @@ use ieee.std_logic_unsigned.all;
 use work.my_package.all; 
 use work.all;
 
-entity register_file is
+entity RF_Match is
 	port(input_data	: in signed(data_width-1 downto 0);
-		 output_mat	: out m_file;
+		 output_data: out signed(data_width-1 downto 0);
 		 clock		: in std_logic;
 		 reset		: in std_logic;
-		 rd_ptr		: in unsigned(ptr_width-1 downto 0);
-		 wr_ptr		: in unsigned(ptr_width+1 downto 0);
+		 rd_ptr		: in unsigned(6 downto 0);
+		 wr_ptr		: in unsigned(6 downto 0);
 		 wr_en		: std_logic);
-	end register_file;
+	end RF_Match;
 
-architecture beh_reg of register_file is
-	signal register_file : sram_coeff;
+architecture beha_reg of RF_Match is
+	signal register_file: RF(127 downto 0);
 begin
-output_mat(0)(0)<=register_file(to_integer(rd_ptr));
-output_mat(0)(1)<=register_file(to_integer(rd_ptr+1));
-output_mat(1)(0)<=register_file(to_integer(rd_ptr+2));
-output_mat(1)(1)<=register_file(to_integer(rd_ptr+3));
+output_data<=register_file(to_integer(rd_ptr));
 
 process(clock,reset)
-	
+		
 begin
 	
 	if (reset='0') then
@@ -38,4 +35,4 @@ begin
 end process;
 	
 	
-end beh_reg;
+end beha_reg;

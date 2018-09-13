@@ -1,0 +1,24 @@
+library ieee;
+library work;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+use ieee.std_logic_unsigned.all;
+use work.my_package.all; 
+use work.all;
+
+
+entity rotation_stage_2 is
+	port(A:in signed(2*data_width-1 downto 0);
+		 B:in signed(2*data_width-1 downto 0);
+		 C:in signed(2*data_width-1 downto 0);
+		 D:in signed(2*data_width-1 downto 0);
+		 output_x: out signed(data_width-1 downto 0);
+		 output_y: out signed(data_width-1 downto 0));
+end entity;
+	
+architecture rot_arch_2 of rotation_stage_2 is
+	begin
+		output_x<=resize((A-C),data_width);
+		output_y<=resize((B+D),data_width);
+end rot_arch_2;

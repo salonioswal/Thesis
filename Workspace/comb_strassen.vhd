@@ -1,0 +1,138 @@
+library ieee;
+library work;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+use work.my_package.all; 
+use work.all;
+
+entity comb_strassen is
+	port(input_data: in signed(data_width-1 downto 0);
+		 output_data: out m_file;
+		 clock: in std_logic;
+		 reset: in std_logic;
+		 start: in std_logic
+		);
+end comb_strassen;
+	
+architecture beh_comb of comb_strassen is
+	
+component FSM_strassen is
+	port(SRAM_wr_ptr	: out unsigned(ptr_width+1 downto 0); --sram write addr
+		 RF_wr_ptr		: out unsigned(ptr_width+1 downto 0); --regsiter file write addr
+		 SRAM_rd_ptr	: out unsigned(ptr_width+1 downto 0); --sram read pointer
+		 RF_rd_ptr		: out unsigned(ptr_width-1 downto 0); --regsiter file read pointer
+		 reset			: in std_logic; --reset
+		 clock			: in std_logic; --clock
+		 reset_RF       : out std_logic; --register file reset(negative)
+		 reset_SRAM     : out std_logic; --sram reset(negative)
+		 reset_BE       : out std_logic; --basic element reset(negative)
+		 wr_en_sram		: out std_logic; --write enable sram
+		 wr_en_rf		: out std_logic; --write enable for register file
+		 start			: in std_logic); --write enable register file
+end component;
+	
+component sram_strassen is
+	port(input_data: in signed(data_width-1 downto 0);
+		 output_data: out signed(data_width-1 downto 0);
+		 wr_ptr: in unsigned(ptr_width+1 downto 0);
+		 rd_ptr: in unsigned(ptr_width+1 downto 0);
+		 clock: in std_logic;
+		 reset: in std_logic;
+		 wr_en: in std_logic);
+	end component;
+
+component strassen_level is
+	port(A_1	: in m_file;
+		 B_1	: in m_file;
+		 C  	: out m_file;
+		 clock	: in std_logic;
+		 reset	: in std_logic);
+end component;
+	
+component register_file is
+	port(input_data	: in signed(data_width-1 downto 0);
+		 output_mat	: out m_file;
+		 clock		: in std_logic;
+		 reset		: in std_logic;
+		 rd_ptr		: in unsigned(ptr_width-1 downto 0);
+		 wr_ptr		: in unsigned(ptr_width+1 downto 0);
+		 wr_en		: std_logic);
+end component;
+
+		 signal SRAM_wr_ptr	: unsigned(ptr_width+1 downto 0); --sram write addr
+		 signal RF_wr_ptr	:  unsigned(ptr_width+1 downto 0); --regsiter file write addr
+		 signal SRAM_rd_ptr	: unsigned(ptr_width+1 downto 0); --sram read pointer
+		 signal RF_rd_ptr	: unsigned(ptr_width-1 downto 0); --regsiter file read pointer
+		 signal reset_RF    : std_logic; --register file reset(negative)
+		 signal reset_SRAM  : std_logic; --sram reset(negative)
+		 signal reset_BE    : std_logic; --basic element reset(negative)
+		 signal wr_en_sram  : std_logic; --write enable sram
+		 signal wr_en_rf    : std_logic; --write enable for register file
+	     signal input_rf    : signed(data_width-1 downto 0);
+		 signal input_BE	: m_file;
+	
+begin
+
+FSM_map:  FSM_strassen port map(  SRAM_wr_ptr=>SRAM_wr_ptr,	
+		 RF_wr_ptr=>RF_wr_ptr,		
+		 SRAM_rd_ptr=>SRAM_rd_ptr,
+		 RF_rd_ptr=>RF_rd_ptr,
+		 reset=>reset,		
+		 clock=>clock,
+		 reset_RF=>reset_RF,  
+		 reset_SRAM=>reset_SRAM,
+		 reset_BE=>reset_BE,  
+		 wr_en_sram=>wr_en_sram,		
+		 wr_en_rf=>wr_en_rf,	
+		 start=>start);
+	
+sram_map: sram_strassen port map 
+		 (input_data=>input_data,
+		 output_data=>input_rf,
+		 wr_ptr=> SRAM_wr_ptr,
+		 rd_ptr=> SRAM_rd_ptr,
+		 clock=>clock,
+		 reset=>reset_SRAM,
+		 wr_en=> wr_en_sram);
+
+register_map: register_file port map(
+		input_data=>input_rf,
+		 output_mat=>input_BE,	
+		 clock=>clock,		
+		 reset=>reset_RF,		
+		 rd_ptr=>RF_rd_ptr,	
+		 wr_ptr=> RF_wr_ptr,	
+		 wr_en=>wr_en_rf);
+	
+BE_map: strassen_level port map(
+		 A_1=>input_BE,	
+		 B_1=>input_BE,
+		 C => output_data,
+		 clock=>clock,	
+		 reset=>reset_BE);	
+	
+end beh_comb;		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
